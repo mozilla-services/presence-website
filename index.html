@@ -45,15 +45,44 @@
         It is currently in its early stages,
         but already provides a basic service experience.
     </p>
+    <p>To try out the service, hit the buttons below on your Firefox OS device.
+    </p>
     <p>
-        If you want to learn more & contribute to the data gathering, please
+      <button onclick="installPresence()">Install Presence</button>
+      <button onclick="installTribe()">Install Tribe</button>
+
+    </p>
+    <p>
+        If you want to learn more & contribute, please
         <a href="https://wiki.mozilla.org/CloudServices/Presence">
             check our wiki page</a>.
     </p>
 
 </section>
 
-
+    <script>
+      function installPresence() {
+        var manifestUrl = 'http://54.184.23.239/presence-fxapp/package.manifest';
+        var req = navigator.mozApps.installPackage(manifestUrl);
+        req.onsuccess = function() {
+          alert(this.result.origin);
+        };
+        req.onerror = function() {
+          alert(this.error.name);
+        };
+      }
+      function installTribe() {
+        var manifestUrl = 'http://54.184.23.239/presence-tribe/package.manifest';
+        var req = navigator.mozApps.installPackage(manifestUrl);
+        req.onsuccess = function() {
+          alert(this.result.origin);
+        };
+        req.onerror = function() {
+          alert(this.error.name);
+        };
+      }
+    </script>
+ 
     
     <footer id="colophon">
         <div class="footer-logo">
