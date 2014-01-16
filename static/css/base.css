@@ -10,6 +10,11 @@ article, aside, canvas, figure, figure img, figcaption, hgroup, footer, header, 
     display: block;
 }
 
+
+button {
+  min-width: 60px;
+}
+
 a img { border: 0; }
 
 /* fonts */
