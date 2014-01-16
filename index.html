@@ -62,7 +62,7 @@
 
     <script>
       function installPresence() {
-        var manifestUrl = 'http://54.184.23.239/presence-fxapp/package.manifest';
+        var manifestUrl = 'http://presence.services.mozilla.com/presence-fxapp/package.manifest';
         var req = navigator.mozApps.installPackage(manifestUrl);
         req.onsuccess = function() {
           alert(this.result.origin);
@@ -72,7 +72,7 @@
         };
       }
       function installTribe() {
-        var manifestUrl = 'http://54.184.23.239/presence-tribe/package.manifest';
+        var manifestUrl = 'http://presence.services.mozilla.com/presence-tribe/package.manifest';
         var req = navigator.mozApps.installPackage(manifestUrl);
         req.onsuccess = function() {
           alert(this.result.origin);
