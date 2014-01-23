@@ -48,8 +48,7 @@
     <p>To try out the service, hit the buttons below on your Firefox OS device.
     </p>
     <p>
-      <button class="install" onclick="installPresence()">Install Presence</button>
-      <button class="install" onclick="installTribe()">Install Tribe</button>
+      <button class="install" onclick="installTribe()">Install Demo</button>
 
     </p>
     <p>
@@ -61,21 +60,11 @@
 </section>
 
     <script>
-      function installPresence() {
-        var manifestUrl = 'http://presence.services.mozilla.com/presence-fxapp/package.manifest';
-        var req = navigator.mozApps.installPackage(manifestUrl);
-        req.onsuccess = function() {
-          alert(this.result.origin);
-        };
-        req.onerror = function() {
-          alert(this.error.name);
-        };
-      }
+
       function installTribe() {
         var manifestUrl = 'http://presence.services.mozilla.com/presence-tribe/package.manifest';
         var req = navigator.mozApps.installPackage(manifestUrl);
         req.onsuccess = function() {
-          alert(this.result.origin);
         };
         req.onerror = function() {
           alert(this.error.name);
@@ -83,7 +72,6 @@
       }
     </script>
  
-    
     <footer id="colophon">
         <div class="footer-logo">
             <img src="/static/images/mozilla-logo.png"
